@@ -1,0 +1,115 @@
+// Arrows
+
+.swiper-button-next,
+.swiper-button-prev  {
+	position: absolute;
+	top: 50%;
+	width: 32px;
+	height: 32px;
+	margin: 0;
+	background: transparent;
+	border: 2px solid $color-white;
+	border-radius: 50%;
+	transform: translateY(-50%);
+	transition-property: background-color, border-color, opacity;
+	transition-duration: $transition-time;
+	outline: none;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		width: 10px;
+		height: 10px;
+		border-right: 2px solid $color-white;
+		border-bottom: 2px solid $color-white;
+		transform-origin: top left;
+		transition: border-color $transition-time;
+	}
+
+	&:hover {
+		background-color: transparent;
+		border-color: rgba($color-white, $opacity);
+
+		&::after {
+			border-right-color: rgba($color-white, $opacity);
+			border-bottom-color: rgba($color-white, $opacity);
+		}
+	}
+
+	&:active {
+		background-color: transparent;
+		border-color: $color-white;
+
+		&::after {
+			border-right-color: $color-white;
+			border-bottom-color: $color-white;
+		}
+	}
+
+	&.swiper-button-disabled {
+		background: transparent;
+		opacity: 0.5;
+		pointer-events: none;
+	}
+
+	// Modifiers
+}
+
+.swiper-button-next {
+	right: 24px;
+
+	&::after {
+		left: calc(50% - 2px);
+		transform: rotate(-45deg) translate(-50%, -50%);
+	}
+}
+
+.swiper-button-prev {
+	left: 24px;
+
+	&::after {
+		left: calc(50% + 2px);
+		transform: rotate(135deg) translate(-50%, -50%);
+	}
+}
+
+// Pagination
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom, .swiper-pagination-fraction {
+	bottom: 0;
+	font-size: 0;
+	line-height: 1;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0 4px;
+}
+
+.swiper-pagination-bullet {
+	width: 6px;
+	height: 6px;
+	background: rgba($color-white, 0.5);
+	opacity: 1;
+	transition-property: background-color, border-color;
+	transition-duration: $transition-time;
+}
+
+.swiper-pagination-bullet-active {
+	background: $color-white;
+	opacity: 1;
+}
+
+// Alternate
+
+.swiper-pagination--alternate .swiper-pagination-bullet {
+	background-color: transparent;
+	border: 1px solid $color-white;
+}
+
+.swiper-pagination--alternate .swiper-pagination-bullet-active {
+	background-color: $color-white;
+}

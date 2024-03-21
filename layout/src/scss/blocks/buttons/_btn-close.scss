@@ -1,0 +1,74 @@
+$btn-close-btn-width: 						40px;
+$btn-close-btn-height: 						40px;
+
+$btn-close-layer-width: 					28px;
+$btn-close-layer-height: 					2px;
+$btn-close-layer-color: 					$color-white;
+$btn-close-layer-color--hover: 		rgba($color-white, $opacity);
+$btn-close-layer-color--active: 	rgba($color-white, $opacity);
+
+$btn-close-layer-color--outline: 	$outline-color;
+
+.btn-close {
+	$self: &;
+	@include reset-btn();
+	display: block;
+	position: relative;
+	width: $btn-close-btn-width;
+	height: $btn-close-btn-height;
+
+	@media (max-width: $screen-md - 1) {
+		width: 24px;
+		height: 24px;
+	}
+
+	&:hover {
+
+		&::before,
+		&::after {
+			background-color: $btn-close-layer-color--hover;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: 1px solid $btn-close-layer-color--outline;
+	}
+
+	&:active {
+
+		&::before,
+		&::after {
+			background-color: $btn-close-layer-color--active;
+		}
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: $btn-close-layer-width;
+		height: $btn-close-layer-height;
+		background-color: $btn-close-layer-color;
+		transition: background-color $transition-time;
+
+		@media (max-width: $screen-md - 1) {
+			width: 16px;
+		}
+	}
+
+	&::before {
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+
+	&::after {
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+
+	// Modifiers
+}

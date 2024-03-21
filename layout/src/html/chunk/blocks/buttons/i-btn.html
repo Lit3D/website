@@ -1,0 +1,16 @@
+@@if (type === '') {
+<button class="i-btn@@mod" type="@@type"@@attr>
+	<svg class="icon i-btn__icon" viewBox="0 0 @@btnIconSize @@btnIconSize" width="@@btnIconSize" height="@@btnIconSize">
+		<use xlink:href="img/sprite.svg#@@btnIcon"></use>
+	</svg>
+</button>
+}
+
+@@if (type === 'link') {
+<button class="i-btn@@mod" href="@@href"@@attr>
+	<svg class="icon i-btn__icon" viewBox="0 0 @@btnIconSize @@btnIconSize" width="@@btnIconSize" height="@@btnIconSize">
+		<use xlink:href="img/sprite.svg#@@btnIcon"></use>
+	</svg>
+</button>
+}
+

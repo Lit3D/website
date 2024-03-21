@@ -1,0 +1,138 @@
+// Base colors
+
+$color-black:                 #000000;
+$color-white:                 #FFFFFF;
+
+$color-primary:								#14DC14;
+$color-primary-2:							#0e9a0e;
+$color-primary-3:							#0a6e0a;
+
+$color-secondary:							#C4F6C4;
+
+$color-gray:									#808080;
+
+$color-gray-2:								#8D8D8D;
+$color-gray-3:								#999999;
+$color-gray-4:								#A6A6A6;
+$color-gray-5:								#B3B3B3;
+$color-gray-6:								#C0C0C0;
+$color-gray-7:								#CCCCCC;
+$color-gray-8:								#D9D9D9;
+$color-gray-9:								#E6E6E6;
+$color-gray-10:								#F2F2F2;
+$color-gray-11:								#4C4C4C;
+
+$color-success:               #5CB75C;
+$color-danger:                #D8544F;
+$color-warning:               #EFAC4D;
+
+// Semantic colors
+
+$text-color:                  $color-white;
+$text-color--muted:           $color-gray;
+$body-bg:                     $color-black;
+
+$link-color:                  $color-white;
+$link-color--hover:           rgba($color-white, 0.7);
+$link-color--active:          $color-white;
+
+$border-color:                $color-gray;
+
+$outline-color:               red;
+
+// Typography
+
+$font-size:                   16px;
+
+$font-size-h1:                40px;
+$font-size-h2:                32px;
+$font-size-h3:                24px;
+$font-size-h4:                18px;
+$font-size-h5:                16px;
+$font-size-h6:                16px;
+
+$font-size-sm:                0.75em;
+
+$line-height:                 1.5;
+
+$typo-margin-vertical:        1em;
+
+$font-family:                'Montserrat', -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-family--accent:        'Druk wide', -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-family--monospace:     SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+
+// Widths
+
+$screen-xs:                   0;
+$screen-sm:                   768px;
+$screen-md:                   1024px;
+$screen-lg:                   1156px;
+$screen-xl:                   1440px;
+$screen-xxl:                  1700px;
+
+$container-xs:                calc(100% - 16px);
+$container-sm:                calc(100% - 16px);
+$container-md:                calc(100% - 16px);
+$container-lg:                $screen-lg - 72;
+$container-xl:                $screen-xl - 136;
+$container-xxl:               $screen-xxl - 136;
+
+// Grid
+
+$grid-columns:                12;
+$grid-gutter-width:           24px;
+
+// Transitions
+
+$transition-time:             0.3s;
+
+$card-transition-time:        0.6s;
+$card-timing-function: 				cubic-bezier(0.32, 0.08, 0.24, 1);
+
+$transition-time--header:     0.3s;
+$transition-easing--header: 	cubic-bezier(0.85, 0, 0.15, 1);
+
+$transition-time--team:										0.6s;
+$transition-timing-function--team: 				ease;
+
+// Other
+
+$field-padding-vertical:      5px;
+$field-padding-horizontal:    12px;
+
+$border-radius:               3px;
+$opacity:                     0.7;
+
+$shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);
+
+$z-index-menu:               	50;
+$z-index-modal:               100;
+
+// Sections
+
+$section-top-padding-xs: 			64px;
+$section-top-padding-sm: 			64px;
+$section-top-padding-md: 			80px;
+$section-top-padding-lg: 			80px;
+$section-top-padding-xl: 			128px;
+$section-top-padding-xxl: 		128px;
+
+$section-bottom-padding-xs: 	64px;
+$section-bottom-padding-sm: 	64px;
+$section-bottom-padding-md: 	80px;
+$section-bottom-padding-lg: 	80px;
+$section-bottom-padding-xl: 	128px;
+$section-bottom-padding-xxl: 	128px;
+
+// Hamburger
+
+$hamburger-padding-x           : 0;
+$hamburger-padding-y           : 0;
+$hamburger-layer-width         : 32px;
+$hamburger-layer-height        : 2px;
+$hamburger-layer-spacing       : 6px;
+$hamburger-layer-color         : $color-white;
+$hamburger-layer-border-radius : 0;
+$hamburger-hover-opacity       : 1;
+$hamburger-active-layer-color  : $color-white;
+$hamburger-active-hover-opacity: 1;

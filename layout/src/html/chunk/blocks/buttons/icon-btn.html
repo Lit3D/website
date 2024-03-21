@@ -1,0 +1,16 @@
+@@if (isLink === '') {
+<button class="icon-btn@@mod@@mix" type="@@type"@@attr>
+	<svg class="icon-btn__icon" viewBox="0 0 24 24" width="24" height="24">
+		<use xlink:href="img/sprite.svg#@@icon_name"></use>
+	</svg>
+	<span class="icon-btn__title">@@title</span>
+</button>
+}
+@@if (isLink === 'true') {
+<a class="icon-btn@@mod@@mix" href="@@href"@@attr>
+	<svg class="icon-btn__icon" viewBox="0 0 24 24" width="24" height="24">
+		<use xlink:href="img/sprite.svg#@@icon_name"></use>
+	</svg>
+	<span class="icon-btn__title">@@title</span>
+</a>
+}

@@ -1,0 +1,26 @@
+.contacts {
+	$self: &;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	row-gap: 48px;
+
+	@media (min-width: $screen-xl) {
+		row-gap: 96px;
+	}
+
+	&__header {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+		row-gap: 12px;
+
+		@media (min-width: $screen-xl) {
+			row-gap: 16px;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+<div class="slider@@mod@@mix">
+	<div class="slider__instance swiper js-slider" data-slider-params="@@params">
+		<div class="slider__wrapper swiper-wrapper">
+			<div class="slider__item swiper-slide">
+				<div class="temp" style="width: 100%; height: 400px; background: #0d95e8"></div>
+			</div>
+			<div class="slider__item swiper-slide">
+				<div class="temp" style="width: 100%; height: 400px; background: #EFAC4D"></div>
+			</div>
+			<div class="slider__item swiper-slide">
+				<div class="temp" style="width: 100%; height: 400px; background: #D8544F"></div>
+			</div>
+			<div class="slider__item swiper-slide">
+				<div class="temp" style="width: 100%; height: 400px; background: #5CB75C"></div>
+			</div>
+		</div>
+		@@if (isNav === 'true') {
+		<div class="slider-nav">
+			<div class="slider-nav__btn slider-nav__btn--prev swiper-button-prev js-slider-btn-prev"></div>
+			<div class="slider-nav__btn slider-nav__btn--next swiper-button-next js-slider-btn-next"></div>
+		</div>
+		}
+		@@if (isPagination === 'true') {
+		<div class="slider__pagination swiper-pagination js-slider-pagination"></div>
+		}
+		@@if (isScrollbar === 'true') {
+		<div class="slider__scrollbar swiper-scrollbar"></div>
+		}
+	</div>
+</div>
