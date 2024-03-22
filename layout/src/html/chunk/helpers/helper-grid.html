@@ -1,0 +1,74 @@
+@@if (isVisible === 'true') {
+<div class="helper-grid" id="helper-grid" style="display:none;">
+	<div class="helper-grid__container">
+		<div class="helper-grid__row">
+			<div class="helper-grid__col">
+				<div class="helper-grid__col-inner"></div>
+			</div>
+			<div class="helper-grid__col">
+				<div class="helper-grid__col-inner"></div>
+			</div>
+			<div class="helper-grid__col">
+				<div class="helper-grid__col-inner"></div>
+			</div>
+			<div class="helper-grid__col">
+				<div class="helper-grid__col-inner"></div>
+			</div>
+			<div class="helper-grid__col">
+				<div class="helper-grid__col-inner"></div>
+			</div>
+			<div class="helper-grid__col">
+				<div class="helper-grid__col-inner"></div>
+			</div>
+			<div class="helper-grid__col">
+				<div class="helper-grid__col-inner"></div>
+			</div>
+			<div class="helper-grid__col">
+				<div class="helper-grid__col-inner"></div>
+			</div>
+			<div class="helper-grid__col">
+				<div class="helper-grid__col-inner"></div>
+			</div>
+			<div class="helper-grid__col">
+				<div class="helper-grid__col-inner"></div>
+			</div>
+			<div class="helper-grid__col">
+				<div class="helper-grid__col-inner"></div>
+			</div>
+			<div class="helper-grid__col">
+				<div class="helper-grid__col-inner"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="helper-panel">
+	<ul class="helper-panel__btn-list">
+		<li class="helper-panel__btn-item">
+			<button class="helper-panel__btn js-helper-show-grid" title="Show grid">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0 0H4V24H0V0Z" fill="#C4C4C4"/>
+					<path d="M5 0H9V24H5V0Z" fill="#C4C4C4"/>
+					<path d="M10 0H14V24H10V0Z" fill="#C4C4C4"/>
+					<path d="M15 0H19V24H15V0Z" fill="#C4C4C4"/>
+					<path d="M20 0H24V24H20V0Z" fill="#C4C4C4"/>
+				</svg>
+			</button>
+		</li>
+	</ul>
+</div>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const helperShowGridToggle = document.querySelector('.js-helper-show-grid');
+		const helperGrid = document.getElementById('helper-grid');
+		helperShowGridToggle.addEventListener('click', (event) => {
+			event.target.classList.toggle('is-active');
+
+			if (event.target.classList.contains('is-active')) {
+				helperGrid.style.display = 'block';
+			} else {
+				helperGrid.style.display = 'none';
+			}
+		});
+	});
+</script>
+}

@@ -1,0 +1,175 @@
+.modal {
+	$self: &;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: $z-index-modal;
+	display: none;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: rgba($color-black, 1);
+	overflow-y: auto;
+
+	&__wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		height: 100%;
+	}
+
+	&__aside {
+		width: 100%;
+
+		@media (min-width: $screen-md) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 45%;
+			height: 100%;
+		}
+
+		@media (min-width: $screen-xl) {
+			width: 43%;
+		}
+	}
+
+	&__container {
+		@include container();
+		position: relative;
+		height: 100%;
+	}
+
+	&__row {
+		@include row();
+		height: 100%;
+	}
+
+	&__col {
+		@include col(xs, 12, 12);
+		@include col(sm, 10, 12);
+		@include col-offset(sm, 1, 12);
+		@include col(md, 6, 12);
+		@include col-offset(md, 6, 12);
+		@include col(xl, 5, 12);
+		@include col-offset(xl, 6, 12);
+	}
+
+	&__inner {
+		position: relative;
+		width: 100%;
+		padding-top: 160px;
+		//padding: 64px 16px;
+		border-radius: 0;
+		margin: auto;
+
+		@media (min-width: $screen-md) {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: flex-start;
+			height: 100%;
+			padding-top: 64px;
+			padding-bottom: 64px;
+		}
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 24px;
+		font-family: $font-family--accent;
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 44px;
+
+		@media (min-width: $screen-xl) {
+			margin-bottom: 40px;
+			font-size: 40px;
+			line-height: 56px;
+		}
+	}
+
+	&__year {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 48px;
+		left: 20px;
+		width: 80px;
+		height: 80px;
+		font-family: $font-family--accent;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1;
+		background-color: $color-gray-11;
+		border-radius: 50%;
+
+		@media (min-width: $screen-md) {
+			top: auto;
+			bottom: 48px;
+			right: 48px;
+			left: auto;
+		}
+
+		@media (min-width: $screen-xl) {
+			width: 120px;
+			height: 120px;
+			font-size: 20px;
+		}
+	}
+
+	// Mixes
+
+	&__btn-close {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+
+		@media (min-width: $screen-xl) {
+			top: 40px;
+			right: 40px;
+		}
+	}
+
+	&__slider-nav {
+		display: none;
+
+		@media (min-width: $screen-md) {
+			display: flex;
+			padding-top: 56px;
+		}
+
+		@media (min-width: $screen-xl) {
+			padding-top: 80px;
+		}
+	}
+
+	&__slider {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__content {
+		font-size: 14px;
+		line-height: 20px;
+
+		@media (min-width: $screen-xl) {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+
+	// Modifiers
+
+	&--open {}
+}

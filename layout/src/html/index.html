@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+	@@include('chunk/head/meta.html', {
+	"title": "LIT3D",
+	"keywords": "",
+	"description": "",
+	"isOg": "false",
+	"og_title": "",
+	"og_url": "",
+	"og_description": "",
+	"og_img": "img/og-img.jpg",
+	})
+	@@include('chunk/head/fonts-preload.html', {"isPreload": "true"})
+	@@include('chunk/head/favicon.html')
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="icon" href="img/favicon/favicon.svg">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="manifest" href="manifest.json">
+</head>
+<body>
+<div class="page__inner">
+	<div class="page__content">
+		@@include('chunk/base/page-header.html')
+		<main class="page__main">
+			<canvas class="webgl"></canvas>
+			<div class="page-fade"></div>
+			<div class="page-overlay"></div>
+			<section class="section section--1 section--window section--window_alternate">
+				<div class="section__inner">
+					<div class="section__container">
+						<div class="section__row">
+							<div class="section__col section__col--center">
+								<h1 class="main-title">
+									<div class="main-title__spacer"></div>
+									<div class="main-title__title a-fade js-reveal-intro">Новейшие технологии</div>
+									<div class="main-title__desc a-fade js-reveal-intro">
+										<div class="main-title__subtitle">в мультимедийных выставках</div>
+										<div class="main-title__subtitle">и экспозиционных павильонах</div>
+									</div>
+								</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section section--2a section--spacer section--window"></section>
+			<section class="section section--3 section-content section--window section--window_center" id="about">
+				<div class="section__inner">
+					<div class="section__container">
+						<div class="section__row">
+							<div class="section__col section__col--8">
+								<div class="about">
+									<h2 class="section-title text-split js-reveal-about-1">Мы – команда амбициозных и влюбленных в свое дело специалистов</h2>
+									<div class="content about__content js-reveal-about-2">
+										<p>В настоящий момент за плечами компании более 30 выставочных проектов, опыт участия в государственных заказах, прямые договора поставок с производителями мультимедийного оборудования.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section section--4 section-content section--window section--slider" id="team">
+				<div class="section__inner js-reveal-team-1">
+					<div class="slider slider--team">
+						<div class="slider__instance swiper js-slider" data-slider-params="team">
+							<div class="slider__wrapper swiper-wrapper">
+								<div class="slider__item swiper-slide">
+									<div class="slider__t-card">
+										<div class="slider__t-card-img-wrap">
+											<div class="slider__t-card-img-ratio">
+												<picture>
+													<img class="slider__t-card-img" src="img/test-project.png" srcset="img/test-project@2x.png 2x" width="486" height="698" alt="">
+												</picture>
+											</div>
+										</div>
+										<div class="slider__t-card-desc">
+											<h3 class="slider__t-card-name">Фамилия Имя</h3>
+											<div class="slider__t-card-position">Должность</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider__item swiper-slide">
+									<div class="slider__t-card">
+										<div class="slider__t-card-img-wrap">
+											<div class="slider__t-card-img-ratio">
+												<img class="slider__t-card-img" src="img/test-project.png" width="486" height="698" alt="">
+											</div>
+										</div>
+										<div class="slider__t-card-desc">
+											<h3 class="slider__t-card-name">Фамилия Имя</h3>
+											<div class="slider__t-card-position">Должность</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider__item swiper-slide">
+									<div class="slider__t-card">
+										<div class="slider__t-card-img-wrap">
+											<div class="slider__t-card-img-ratio">
+												<img class="slider__t-card-img" src="img/test-project.png" width="486" height="698" alt="">
+											</div>
+										</div>
+										<div class="slider__t-card-desc">
+											<h3 class="slider__t-card-name">Фамилия Имя</h3>
+											<div class="slider__t-card-position">Должность</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider__item swiper-slide">
+									<div class="slider__t-card">
+										<div class="slider__t-card-img-wrap">
+											<div class="slider__t-card-img-ratio">
+												<img class="slider__t-card-img" src="img/test-project.png" width="486" height="698" alt="">
+											</div>
+										</div>
+										<div class="slider__t-card-desc">
+											<h3 class="slider__t-card-name">Фамилия Имя</h3>
+											<div class="slider__t-card-position">Должность</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider__item swiper-slide">
+									<div class="slider__t-card">
+										<div class="slider__t-card-img-wrap">
+											<div class="slider__t-card-img-ratio">
+												<img class="slider__t-card-img" src="img/test-project.png" width="486" height="698" alt="">
+											</div>
+										</div>
+										<div class="slider__t-card-desc">
+											<h3 class="slider__t-card-name">Фамилия Имя</h3>
+											<div class="slider__t-card-position">Должность</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider__item swiper-slide">
+									<div class="slider__t-card">
+										<div class="slider__t-card-img-wrap">
+											<div class="slider__t-card-img-ratio">
+												<img class="slider__t-card-img" src="img/test-project.png" width="486" height="698" alt="">
+											</div>
+										</div>
+										<div class="slider__t-card-desc">
+											<h3 class="slider__t-card-name">Фамилия Имя</h3>
+											<div class="slider__t-card-position">Должность</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="slider__pagination swiper-pagination swiper-pagination--alternate js-slider-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section section--5 section-content" id="projects">
+				<div class="section__inner">
+					<div class="projects">
+						<div class="projects__inner">
+							<div class="projects__row">
+								<div class="projects__col">
+									<div class="projects__col-inner">
+										@@include('chunk/blocks/cards/p-card.html', {
+										"type": "",
+										"mod": "",
+										"attr": " data-modal-trigger='p-modal-1'",
+										"img_prefix": "p-card",
+										"img_width": "768",
+										"img_height": "768",
+										"img_loading": "",
+										"queue": "01"
+										})
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+										@@include('chunk/blocks/cards/p-card.html', {
+										"type": "",
+										"mod": "",
+										"attr": " data-modal-trigger='p-modal-1'",
+										"img_prefix": "p-card",
+										"img_width": "768",
+										"img_height": "768",
+										"img_loading": "",
+										"queue": "02"
+										})
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+										@@include('chunk/blocks/cards/p-card.html', {
+										"type": "",
+										"mod": "",
+										"attr": " data-modal-trigger='p-modal-1'",
+										"img_prefix": "p-card",
+										"img_width": "768",
+										"img_height": "768",
+										"img_loading": "",
+										"queue": "03"
+										})
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+										@@include('chunk/blocks/cards/p-card.html', {
+										"type": "",
+										"mod": "",
+										"attr": " data-modal-trigger='p-modal-1'",
+										"img_prefix": "p-card",
+										"img_width": "768",
+										"img_height": "768",
+										"img_loading": "",
+										"queue": "04"
+										})
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+										@@include('chunk/blocks/cards/p-card.html', {
+										"type": "",
+										"mod": "",
+										"attr": " data-modal-trigger='p-modal-1'",
+										"img_prefix": "p-card",
+										"img_width": "768",
+										"img_height": "768",
+										"img_loading": "",
+										"queue": "05"
+										})
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+										@@include('chunk/blocks/cards/p-card.html', {
+										"type": "",
+										"mod": "",
+										"attr": " data-modal-trigger='p-modal-1'",
+										"img_prefix": "p-card",
+										"img_width": "768",
+										"img_height": "768",
+										"img_loading": "",
+										"queue": "06"
+										})
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+										@@include('chunk/blocks/cards/p-card.html', {
+										"type": "",
+										"mod": "",
+										"attr": " data-modal-trigger='p-modal-1'",
+										"img_prefix": "p-card",
+										"img_width": "768",
+										"img_height": "768",
+										"img_loading": "",
+										"queue": "07"
+										})
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+										@@include('chunk/blocks/cards/p-card.html', {
+										"type": "",
+										"mod": "",
+										"attr": " data-modal-trigger='p-modal-1'",
+										"img_prefix": "p-card",
+										"img_width": "768",
+										"img_height": "768",
+										"img_loading": "",
+										"queue": "08"
+										})
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+										@@include('chunk/blocks/cards/p-card.html', {
+										"type": "",
+										"mod": "",
+										"attr": " data-modal-trigger='p-modal-1'",
+										"img_prefix": "p-card",
+										"img_width": "768",
+										"img_height": "768",
+										"img_loading": "",
+										"queue": "09"
+										})
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+										@@include('chunk/blocks/cards/p-card.html', {
+										"type": "",
+										"mod": "",
+										"attr": " data-modal-trigger='p-modal-1'",
+										"img_prefix": "p-card",
+										"img_width": "768",
+										"img_height": "768",
+										"img_loading": "",
+										"queue": "10"
+										})
+									</div>
+								</div>
+								<div class="projects__col">
+									<div class="projects__col-inner">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section__container">
+						<div class="section__row">
+							<div class="section__col">
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section section--5a section--spacer section--window"></section>
+			<section class="section section--6 section-content section--window section--window_center" id="contacts">
+				<div class="section__inner">
+					<div class="section__container">
+						<div class="section__row">
+							<div class="section__col section__col--contacts">
+								<div class="contacts">
+									<div class="contacts__header js-reveal-contacts-1">
+										<h2 class="section-title section-title--size_small">Хотите обсудить ваш проект?</h2>
+										<h3 class="section-title section-title--size_small">Cвяжитесь с нами!</h3>
+									</div>
+									<div class="contacts__body js-reveal-contacts-2">
+										<div class="contacts-list">
+											<div class="contacts-list__item">
+												<a class="contacts-list__link" href="tel:88008887766">8 800 888 77 66</a>
+											</div>
+											<div class="contacts-list__item">
+												<a class="contacts-list__link" href="lit3d@gmail.com">lit3d@gmail.com</a>
+											</div>
+											<div class="contacts-list__item">
+												<ul class="social-list">
+													<li class="social-list__item">
+														<a class="social-list__link" href="javascript:void(0);" target="_blank">
+															<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M16 3C12.4694 3 12.0267 3.01497 10.6401 3.07823C9.25642 3.14134 8.3114 3.36112 7.48449 3.68246C6.62963 4.01468 5.90466 4.4592 5.18192 5.18191C4.45921 5.90461 4.0147 6.62964 3.68248 7.48451C3.36112 8.3114 3.14137 9.25642 3.07821 10.6401C3.01496 12.0267 3 12.4694 3 16C3 19.5306 3.01496 19.9733 3.07821 21.3599C3.14137 22.7436 3.36112 23.6886 3.68248 24.5155C4.0147 25.3704 4.45921 26.0953 5.18192 26.8181C5.90466 27.5408 6.62963 27.9853 7.48449 28.3175C8.3114 28.6389 9.25642 28.8587 10.6401 28.9218C12.0267 28.985 12.4694 29 16 29C19.5306 29 19.9733 28.985 21.3599 28.9218C22.7436 28.8587 23.6886 28.6389 24.5155 28.3175C25.3704 27.9853 26.0953 27.5408 26.8181 26.8181C27.5408 26.0953 27.9853 25.3704 28.3175 24.5155C28.6389 23.6886 28.8587 22.7436 28.9218 21.3599C28.985 19.9733 29 19.5306 29 16C29 12.4694 28.985 12.0267 28.9218 10.6401C28.8587 9.25642 28.6389 8.3114 28.3175 7.48451C27.9853 6.62964 27.5408 5.90461 26.8181 5.18191C26.0953 4.4592 25.3704 4.01468 24.5155 3.68246C23.6886 3.36112 22.7436 3.14134 21.3599 3.07823C19.9733 3.01497 19.5306 3 16 3ZM16 5.34234C19.4711 5.34234 19.8823 5.3556 21.2531 5.41814C22.5206 5.47594 23.2089 5.68772 23.667 5.86575C24.2738 6.10158 24.7069 6.38329 25.1618 6.83817C25.6167 7.29311 25.8984 7.72617 26.1342 8.33297C26.3123 8.79106 26.5241 9.4794 26.5819 10.7469C26.6444 12.1177 26.6577 12.5289 26.6577 16C26.6577 19.4711 26.6444 19.8823 26.5819 21.2531C26.5241 22.5206 26.3123 23.2089 26.1342 23.667C25.8984 24.2738 25.6167 24.7069 25.1618 25.1618C24.7069 25.6167 24.2738 25.8984 23.667 26.1342C23.2089 26.3123 22.5206 26.5241 21.2531 26.5818C19.8825 26.6444 19.4714 26.6577 16 26.6577C12.5286 26.6577 12.1175 26.6444 10.7469 26.5818C9.4794 26.5241 8.79106 26.3123 8.33297 26.1342C7.72616 25.8984 7.29311 25.6167 6.83822 25.1618C6.38332 24.7069 6.10158 24.2738 5.86575 23.667C5.68772 23.2089 5.47597 22.5206 5.41813 21.2531C5.35558 19.8823 5.34234 19.4711 5.34234 16C5.34234 12.5289 5.35558 12.1177 5.41813 10.7469C5.47597 9.4794 5.68772 8.79106 5.86575 8.33297C6.10158 7.72617 6.3833 7.29311 6.8382 6.83822C7.29311 6.38329 7.72616 6.10158 8.33297 5.86575C8.79106 5.68772 9.4794 5.47594 10.7469 5.41814C12.1177 5.3556 12.5289 5.34234 16 5.34234Z" fill="white"/>
+																<path d="M16 20.326C13.6067 20.326 11.6666 18.386 11.6666 15.9927C11.6666 13.5995 13.6067 11.6594 16 11.6594C18.3932 11.6594 20.3333 13.5995 20.3333 15.9927C20.3333 18.386 18.3932 20.326 16 20.326ZM16 9.31703C12.313 9.31703 9.32427 12.3058 9.32427 15.9927C9.32427 19.6796 12.313 22.6684 16 22.6684C19.6868 22.6684 22.6756 19.6796 22.6756 15.9927C22.6756 12.3058 19.6868 9.31703 16 9.31703Z" fill="white"/>
+																<path d="M24.4989 9.05471C24.4989 9.91612 23.8006 10.6144 22.9391 10.6144C22.0778 10.6144 21.3795 9.91612 21.3795 9.05471C21.3795 8.19329 22.0778 7.49497 22.9391 7.49497C23.8006 7.49497 24.4989 8.19329 24.4989 9.05471Z" fill="white"/>
+															</svg>
+														</a>
+													</li>
+													<li class="social-list__item">
+														<a class="social-list__link" href="javascript:void(0);" target="_blank">
+															<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M21.6607 7.76C20.7452 6.7195 20.2407 5.38324 20.2411 4H16.1027V20.5333C16.0708 21.428 15.6913 22.2755 15.0443 22.8973C14.3973 23.519 13.5332 23.8665 12.6339 23.8667C10.7321 23.8667 9.15179 22.32 9.15179 20.4C9.15179 18.1067 11.375 16.3867 13.6652 17.0933V12.88C9.04464 12.2667 5 15.84 5 20.4C5 24.84 8.69643 28 12.6205 28C16.8259 28 20.2411 24.6 20.2411 20.4V12.0133C21.9192 13.2131 23.934 13.8569 26 13.8533V9.73333C26 9.73333 23.4821 9.85333 21.6607 7.76Z" fill="white"/>
+															</svg>
+														</a>
+													</li>
+													<li class="social-list__item">
+														<a class="social-list__link" href="javascript:void(0);" target="_blank">
+															<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M13.2 20.2857L20.466 16L13.2 11.7143V20.2857ZM29.384 9.1C29.566 9.77143 29.692 10.6714 29.776 11.8143C29.874 12.9571 29.916 13.9429 29.916 14.8L30 16C30 19.1286 29.776 21.4286 29.384 22.9C29.034 24.1857 28.222 25.0143 26.962 25.3714C26.304 25.5571 25.1 25.6857 23.252 25.7714C21.432 25.8714 19.766 25.9143 18.226 25.9143L16 26C10.134 26 6.48 25.7714 5.038 25.3714C3.778 25.0143 2.966 24.1857 2.616 22.9C2.434 22.2286 2.308 21.3286 2.224 20.1857C2.126 19.0429 2.084 18.0571 2.084 17.2L2 16C2 12.8714 2.224 10.5714 2.616 9.1C2.966 7.81429 3.778 6.98571 5.038 6.62857C5.696 6.44286 6.9 6.31429 8.748 6.22857C10.568 6.12857 12.234 6.08571 13.774 6.08571L16 6C21.866 6 25.52 6.22857 26.962 6.62857C28.222 6.98571 29.034 7.81429 29.384 9.1Z" fill="white"/>
+															</svg>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section section--7 section--window section--window_center">
+				<div class="section__inner">
+					<div class="section__container">
+						<div class="section__row">
+							<div class="section__col section__col--8 section__col--center">
+								<h2 class="section-title section-title--size_small section-title--align_center js-reveal-outro">Любая достаточно развитая технология неотличима от магии</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+</div>
+@@include('chunk/blocks/modal/p-modal.html', {
+"id":			"p-modal-1",
+"mod":		" modal--project",
+"attr": 	"",
+"title": 	"Play DigitalArt"
+})
+<!-- only in development -->
+@@include('chunk/helpers/helper-grid.html', {"isVisible": "false"})
+<!-- only in development ! -->
+<script src="js/main.min.js"></script>
+</body>
+</html>

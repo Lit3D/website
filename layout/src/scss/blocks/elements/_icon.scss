@@ -1,0 +1,6 @@
+.icon {
+	flex-shrink: 0;
+	vertical-align: top;
+	transition-property: fill, color, opacity, transform;
+	transition-duration: $transition-time;
+}

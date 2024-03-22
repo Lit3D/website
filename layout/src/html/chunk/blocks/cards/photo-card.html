@@ -1,0 +1,20 @@
+@@if (type === '') {
+<div class="photo-card@@mod"@@attr>
+	<picture>
+		<img class="photo-card__img" src="img/@@img_prefix-img-@@queue--xs.jpg" srcset="img/@@img_prefix-img-@@queue--xs@2x.jpg 2x" width="@@img_width" height="@@img_height" alt=""@@img_loading>
+	</picture>
+	@@if (isPreloader === 'true') {
+	<div class="swiper-lazy-preloader"></div>
+	}
+</div>
+}
+@@if (type === 'link') {
+<a class="photo-card@@mod" href="@@href"@@attr>
+	<picture>
+		<img class="photo-card__img" src="img/@@img_prefix-img-@@queue--xs.jpg" srcset="img/@@img_prefix-img-@@queue--xs@2x.jpg 2x" width="@@img_width" height="@@img_height" alt=""@@img_loading>
+	</picture>
+	@@if (isPreloader === 'true') {
+	<div class="swiper-lazy-preloader"></div>
+	}
+</a>
+}

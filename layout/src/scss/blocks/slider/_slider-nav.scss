@@ -1,0 +1,23 @@
+.slider-nav {
+	$self: &;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 80px;
+
+	@media (max-width: $screen-sm - 1) {
+		display: none;
+	}
+
+	&__btn {
+		position: relative;
+		top: auto;
+		right: auto;
+		bottom: auto;
+		left: auto;
+		margin: 0;
+		transform: none;
+	}
+}

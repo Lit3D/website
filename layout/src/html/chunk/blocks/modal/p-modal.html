@@ -1,0 +1,78 @@
+<div class="modal@@mod" data-modal="@@id"@@attr>
+	<div class="modal__wrapper">
+		<div class="modal__container">
+			<div class="modal__row">
+				<div class="modal__col">
+					<div class="modal__inner">
+						<h2 class="modal__title">@@title</h2>
+						<div class="content modal__content">
+							<p>Lit3D на протяжении нескольких лет выступает генеральным техническим спонсором Молодежного фестиваля цифрового искусства «Play DigitalArt»</p>
+							<p>Lit3D на протяжении нескольких лет выступает генеральным техническим спонсором Молодежного фестиваля цифрового искусства «Play DigitalArt»</p>
+						</div>
+						<div class="slider-nav modal__slider-nav">
+							<div class="slider-nav__item">
+								<div class="slider-nav__btn slider-nav__btn--prev swiper-button-prev swiper-button-prev--alternate2 js-slider-btn-prev"></div>
+							</div>
+							<div class="slider-nav__item">
+								<div class="slider-nav__btn slider-nav__btn--next swiper-button-next swiper-button-next--alternate2 js-slider-btn-next"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal__aside">
+			<div class="slider slider--modal modal__slider">
+				<div class="slider__instance swiper js-slider" data-slider-params="project">
+					<div class="slider__wrapper swiper-wrapper">
+						<div class="slider__item swiper-slide">
+							<div class="m-img">
+								<div class="m-img__ratio">
+									<picture>
+										<img class="m-img__img" src="img/m-img-01--xs.jpg" srcset="img/m-img-01--xs@2x.jpg 2x" alt="">
+									</picture>
+								</div>
+							</div>
+						</div>
+						<div class="slider__item swiper-slide">
+							<div class="m-img">
+								<div class="m-img__ratio">
+									<picture>
+										<img class="m-img__img" src="img/m-img-02--xs.jpg" srcset="img/m-img-02--xs@2x.jpg 2x" alt="">
+									</picture>
+								</div>
+							</div>
+						</div>
+						<div class="slider__item swiper-slide">
+							<div class="m-img">
+								<div class="m-img__ratio">
+									<picture>
+										<img class="m-img__img" src="img/m-img-03--xs.jpg" srcset="img/m-img-03--xs@2x.jpg 2x" alt="">
+									</picture>
+								</div>
+							</div>
+						</div>
+						<div class="slider__item swiper-slide">
+							<div class="m-img">
+								<div class="m-img__ratio">
+									<picture>
+										<img class="m-img__img" src="img/m-img-04--xs.jpg" srcset="img/m-img-04--xs@2x.jpg 2x" alt="">
+									</picture>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider__pagination swiper-pagination js-slider-pagination"></div>
+				</div>
+			</div>
+		</div>
+		<div class="modal__year">2022</div>
+		@@include('../buttons/btn-close.html', {
+		"modifier": " js-modal-close",
+		"mix":      " modal__btn-close",
+		"type":     "button",
+		"attr":     "",
+		"title":    "Закрыть",
+		})
+	</div>
+</div>

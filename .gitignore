@@ -77,3 +77,8 @@ lerna-debug.log*
 *.tmp
 *.bak
 ._*
+
+### Layout ###
+layout/node_modules/
+layout/public/
+layout/build/

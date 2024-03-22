@@ -1,0 +1,22 @@
+.section-title {
+	$self: &;
+	@include section-title(500);
+
+	// Mixes
+
+	// Modifiers
+
+	&--size_small {
+		font-size: 24px;
+		line-height: 32px;
+
+		@media (min-width: $screen-xl) {
+			font-size: 32px;
+			line-height: 48px;
+		}
+	}
+
+	&--align_center {
+		text-align: center;
+	}
+}

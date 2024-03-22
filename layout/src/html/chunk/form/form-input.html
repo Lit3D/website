@@ -1,0 +1,13 @@
+<div class="form-input@@mod">
+	<input class="form-input__input" type="@@type"@@attr>
+	@@if (isError === 'true') {
+	<div class="error form-input__error">Заполните поле!</div>
+	}
+	@@if (isBtn === 'true') {
+	<button class="i-btn form-input__i-btn" type="button">
+		<svg class="icon i-btn__icon" viewBox="0 0 @@btnIconSize @@btnIconSize" width="@@btnIconSize" height="@@btnIconSize">
+			<use xlink:href="img/sprite.svg#@@btnIcon"></use>
+		</svg>
+	</button>
+	}
+</div>

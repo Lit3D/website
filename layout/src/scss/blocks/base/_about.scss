@@ -1,0 +1,24 @@
+.about {
+
+	// Mixes
+
+	&__content {
+		padding-top: 16px;
+
+		@media (min-width: $screen-xl) {
+			padding-top: 32px;
+		}
+
+		p {
+			max-width: 64ch;
+		}
+	}
+}
+
+.camera-position {
+	position: fixed;
+	bottom: 64px;
+	left: 64px;
+	z-index: 1000;
+	color: #FFFFFF;
+}
