@@ -21,10 +21,10 @@ export default class Blob {
 			strength: 1,
 			insideColor: '#FF0000',
 			outsideColor: '#FFFF00',
-			uYellow: 0.5,
-			uRed: 0.3,
-			uPurple: 0.08,
-			uYellowRed: 0.2
+			uYellow: 1,
+			uRed: 0.14,
+			uPurple: 0.06,
+			uYellowRed: 0.1
 		}
 
 		this.setGeometry();
@@ -73,15 +73,6 @@ export default class Blob {
 				uMixRed: { value: this.params.uRed },
 				uMixPurple: { value: this.params.uPurple },
 				uMixYellowRed: { value: this.params.uYellowRed },
-				// color1: {
-				// 	value: new THREE.Color("red")
-				// },
-				// color2: {
-				// 	value: new THREE.Color("yellow")
-				// },
-				// color3: {
-				// 	value: new THREE.Color("purple")
-				// }
 			}
 		});
 
@@ -98,6 +89,7 @@ export default class Blob {
 		this.particles = new THREE.Points(this.geometry, this.material);
 		this.particles.rotation.x = -Math.PI / 2;
 		this.scene.add(this.particles);
+		//this.experience.camera.instance.lookAt(this.particles.position)
 	}
 
 	update() {

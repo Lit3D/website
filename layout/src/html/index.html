@@ -13,7 +13,7 @@
 	})
 	@@include('chunk/head/fonts-preload.html', {"isPreload": "true"})
 	@@include('chunk/head/favicon.html')
-	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/main.min.css?=v5">
 	<link rel="icon" href="img/favicon/favicon.svg">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="manifest" href="manifest.json">
@@ -24,9 +24,9 @@
 		@@include('chunk/base/page-header.html')
 		<main class="page__main">
 			<canvas class="webgl"></canvas>
-			<div class="page-fade"></div>
-			<div class="page-overlay"></div>
-			<section class="section section--1 section--window section--window_alternate">
+			<div class="page-overlay js-page-overlay"></div>
+			<div class="page-fade js-page-fade"></div>
+			<section class="section section--window section--align_center section--intro" data-camera-from="15" data-camera-to="1" data-camera-distance="100" id="intro">
 				<div class="section__inner">
 					<div class="section__container">
 						<div class="section__row">
@@ -44,15 +44,15 @@
 					</div>
 				</div>
 			</section>
-			<section class="section section--2a section--spacer section--window"></section>
-			<section class="section section--3 section-content section--window section--window_center" id="about">
+			<div class="section-spacer section-spacer--intro" data-fade="in" data-rotation="in"></div>
+			<section class="section section--window section--align_center section--about" id="about">
 				<div class="section__inner">
 					<div class="section__container">
 						<div class="section__row">
 							<div class="section__col section__col--8">
 								<div class="about">
-									<h2 class="section-title text-split js-reveal-about-1">Мы – команда амбициозных и влюбленных в свое дело специалистов</h2>
-									<div class="content about__content js-reveal-about-2">
+									<h2 class="section-title a-fade js-reveal-about">Мы – команда амбициозных и влюбленных в свое дело специалистов</h2>
+									<div class="content about__content a-fade js-reveal-about">
 										<p>В настоящий момент за плечами компании более 30 выставочных проектов, опыт участия в государственных заказах, прямые договора поставок с производителями мультимедийного оборудования.</p>
 									</div>
 								</div>
@@ -61,280 +61,192 @@
 					</div>
 				</div>
 			</section>
-			<section class="section section--4 section-content section--window section--slider" id="team">
-				<div class="section__inner js-reveal-team-1">
-					<div class="slider slider--team">
-						<div class="slider__instance swiper js-slider" data-slider-params="team">
-							<div class="slider__wrapper swiper-wrapper">
-								<div class="slider__item swiper-slide">
-									<div class="slider__t-card">
-										<div class="slider__t-card-img-wrap">
-											<div class="slider__t-card-img-ratio">
-												<picture>
-													<img class="slider__t-card-img" src="img/test-project.png" srcset="img/test-project@2x.png 2x" width="486" height="698" alt="">
-												</picture>
-											</div>
-										</div>
-										<div class="slider__t-card-desc">
-											<h3 class="slider__t-card-name">Фамилия Имя</h3>
-											<div class="slider__t-card-position">Должность</div>
-										</div>
-									</div>
-								</div>
-								<div class="slider__item swiper-slide">
-									<div class="slider__t-card">
-										<div class="slider__t-card-img-wrap">
-											<div class="slider__t-card-img-ratio">
-												<img class="slider__t-card-img" src="img/test-project.png" width="486" height="698" alt="">
-											</div>
-										</div>
-										<div class="slider__t-card-desc">
-											<h3 class="slider__t-card-name">Фамилия Имя</h3>
-											<div class="slider__t-card-position">Должность</div>
-										</div>
-									</div>
-								</div>
-								<div class="slider__item swiper-slide">
-									<div class="slider__t-card">
-										<div class="slider__t-card-img-wrap">
-											<div class="slider__t-card-img-ratio">
-												<img class="slider__t-card-img" src="img/test-project.png" width="486" height="698" alt="">
-											</div>
-										</div>
-										<div class="slider__t-card-desc">
-											<h3 class="slider__t-card-name">Фамилия Имя</h3>
-											<div class="slider__t-card-position">Должность</div>
-										</div>
-									</div>
-								</div>
-								<div class="slider__item swiper-slide">
-									<div class="slider__t-card">
-										<div class="slider__t-card-img-wrap">
-											<div class="slider__t-card-img-ratio">
-												<img class="slider__t-card-img" src="img/test-project.png" width="486" height="698" alt="">
-											</div>
-										</div>
-										<div class="slider__t-card-desc">
-											<h3 class="slider__t-card-name">Фамилия Имя</h3>
-											<div class="slider__t-card-position">Должность</div>
-										</div>
-									</div>
-								</div>
-								<div class="slider__item swiper-slide">
-									<div class="slider__t-card">
-										<div class="slider__t-card-img-wrap">
-											<div class="slider__t-card-img-ratio">
-												<img class="slider__t-card-img" src="img/test-project.png" width="486" height="698" alt="">
-											</div>
-										</div>
-										<div class="slider__t-card-desc">
-											<h3 class="slider__t-card-name">Фамилия Имя</h3>
-											<div class="slider__t-card-position">Должность</div>
-										</div>
-									</div>
-								</div>
-								<div class="slider__item swiper-slide">
-									<div class="slider__t-card">
-										<div class="slider__t-card-img-wrap">
-											<div class="slider__t-card-img-ratio">
-												<img class="slider__t-card-img" src="img/test-project.png" width="486" height="698" alt="">
-											</div>
-										</div>
-										<div class="slider__t-card-desc">
-											<h3 class="slider__t-card-name">Фамилия Имя</h3>
-											<div class="slider__t-card-position">Должность</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="slider__pagination swiper-pagination swiper-pagination--alternate js-slider-pagination"></div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="section section--5 section-content" id="projects">
+			<div class="section-spacer section-spacer--about" data-fade="out" data-camera-from="1" data-camera-to="-1.8" data-camera-distance="100"></div>
+			<section class="section section--projects" id="projects">
 				<div class="section__inner">
 					<div class="projects">
-						<div class="projects__inner">
-							<div class="projects__row">
-								<div class="projects__col">
-									<div class="projects__col-inner">
-										@@include('chunk/blocks/cards/p-card.html', {
-										"type": "",
-										"mod": "",
-										"attr": " data-modal-trigger='p-modal-1'",
-										"img_prefix": "p-card",
-										"img_width": "768",
-										"img_height": "768",
-										"img_loading": "",
-										"queue": "01"
-										})
+						<div class="projects__container">
+							<div class="projects__inner">
+								<div class="projects__row">
+									<div class="projects__col">
+										<div class="projects__col-inner">
+											@@include('chunk/blocks/cards/p-card.html', {
+											"type": "",
+											"mod": "",
+											"attr": " data-modal-trigger='p-modal-1'",
+											"img_prefix": "p-card",
+											"img_width": "768",
+											"img_height": "768",
+											"img_loading": "",
+											"queue": "01"
+											})
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
+									<div class="projects__col">
+										<div class="projects__col-inner">
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
-										@@include('chunk/blocks/cards/p-card.html', {
-										"type": "",
-										"mod": "",
-										"attr": " data-modal-trigger='p-modal-1'",
-										"img_prefix": "p-card",
-										"img_width": "768",
-										"img_height": "768",
-										"img_loading": "",
-										"queue": "02"
-										})
+									<div class="projects__col">
+										<div class="projects__col-inner">
+											@@include('chunk/blocks/cards/p-card.html', {
+											"type": "",
+											"mod": "",
+											"attr": " data-modal-trigger='p-modal-1'",
+											"img_prefix": "p-card",
+											"img_width": "768",
+											"img_height": "768",
+											"img_loading": "",
+											"queue": "02"
+											})
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
+									<div class="projects__col">
+										<div class="projects__col-inner">
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
-										@@include('chunk/blocks/cards/p-card.html', {
-										"type": "",
-										"mod": "",
-										"attr": " data-modal-trigger='p-modal-1'",
-										"img_prefix": "p-card",
-										"img_width": "768",
-										"img_height": "768",
-										"img_loading": "",
-										"queue": "03"
-										})
+									<div class="projects__col">
+										<div class="projects__col-inner">
+											@@include('chunk/blocks/cards/p-card.html', {
+											"type": "",
+											"mod": "",
+											"attr": " data-modal-trigger='p-modal-1'",
+											"img_prefix": "p-card",
+											"img_width": "768",
+											"img_height": "768",
+											"img_loading": "",
+											"queue": "03"
+											})
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
+									<div class="projects__col">
+										<div class="projects__col-inner">
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
-										@@include('chunk/blocks/cards/p-card.html', {
-										"type": "",
-										"mod": "",
-										"attr": " data-modal-trigger='p-modal-1'",
-										"img_prefix": "p-card",
-										"img_width": "768",
-										"img_height": "768",
-										"img_loading": "",
-										"queue": "04"
-										})
+									<div class="projects__col">
+										<div class="projects__col-inner">
+											@@include('chunk/blocks/cards/p-card.html', {
+											"type": "",
+											"mod": "",
+											"attr": " data-modal-trigger='p-modal-1'",
+											"img_prefix": "p-card",
+											"img_width": "768",
+											"img_height": "768",
+											"img_loading": "",
+											"queue": "04"
+											})
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
+									<div class="projects__col">
+										<div class="projects__col-inner">
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
-										@@include('chunk/blocks/cards/p-card.html', {
-										"type": "",
-										"mod": "",
-										"attr": " data-modal-trigger='p-modal-1'",
-										"img_prefix": "p-card",
-										"img_width": "768",
-										"img_height": "768",
-										"img_loading": "",
-										"queue": "05"
-										})
+									<div class="projects__col">
+										<div class="projects__col-inner">
+											@@include('chunk/blocks/cards/p-card.html', {
+											"type": "",
+											"mod": "",
+											"attr": " data-modal-trigger='p-modal-1'",
+											"img_prefix": "p-card",
+											"img_width": "768",
+											"img_height": "768",
+											"img_loading": "",
+											"queue": "05"
+											})
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
+									<div class="projects__col">
+										<div class="projects__col-inner">
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
-										@@include('chunk/blocks/cards/p-card.html', {
-										"type": "",
-										"mod": "",
-										"attr": " data-modal-trigger='p-modal-1'",
-										"img_prefix": "p-card",
-										"img_width": "768",
-										"img_height": "768",
-										"img_loading": "",
-										"queue": "06"
-										})
+									<div class="projects__col">
+										<div class="projects__col-inner">
+											@@include('chunk/blocks/cards/p-card.html', {
+											"type": "",
+											"mod": "",
+											"attr": " data-modal-trigger='p-modal-1'",
+											"img_prefix": "p-card",
+											"img_width": "768",
+											"img_height": "768",
+											"img_loading": "",
+											"queue": "06"
+											})
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
+									<div class="projects__col">
+										<div class="projects__col-inner">
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
-										@@include('chunk/blocks/cards/p-card.html', {
-										"type": "",
-										"mod": "",
-										"attr": " data-modal-trigger='p-modal-1'",
-										"img_prefix": "p-card",
-										"img_width": "768",
-										"img_height": "768",
-										"img_loading": "",
-										"queue": "07"
-										})
+									<div class="projects__col">
+										<div class="projects__col-inner">
+											@@include('chunk/blocks/cards/p-card.html', {
+											"type": "",
+											"mod": "",
+											"attr": " data-modal-trigger='p-modal-1'",
+											"img_prefix": "p-card",
+											"img_width": "768",
+											"img_height": "768",
+											"img_loading": "",
+											"queue": "07"
+											})
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
+									<div class="projects__col">
+										<div class="projects__col-inner">
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
-										@@include('chunk/blocks/cards/p-card.html', {
-										"type": "",
-										"mod": "",
-										"attr": " data-modal-trigger='p-modal-1'",
-										"img_prefix": "p-card",
-										"img_width": "768",
-										"img_height": "768",
-										"img_loading": "",
-										"queue": "08"
-										})
+									<div class="projects__col">
+										<div class="projects__col-inner">
+											@@include('chunk/blocks/cards/p-card.html', {
+											"type": "",
+											"mod": "",
+											"attr": " data-modal-trigger='p-modal-1'",
+											"img_prefix": "p-card",
+											"img_width": "768",
+											"img_height": "768",
+											"img_loading": "",
+											"queue": "08"
+											})
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
+									<div class="projects__col">
+										<div class="projects__col-inner">
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
-										@@include('chunk/blocks/cards/p-card.html', {
-										"type": "",
-										"mod": "",
-										"attr": " data-modal-trigger='p-modal-1'",
-										"img_prefix": "p-card",
-										"img_width": "768",
-										"img_height": "768",
-										"img_loading": "",
-										"queue": "09"
-										})
+									<div class="projects__col">
+										<div class="projects__col-inner">
+											@@include('chunk/blocks/cards/p-card.html', {
+											"type": "",
+											"mod": "",
+											"attr": " data-modal-trigger='p-modal-1'",
+											"img_prefix": "p-card",
+											"img_width": "768",
+											"img_height": "768",
+											"img_loading": "",
+											"queue": "09"
+											})
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
+									<div class="projects__col">
+										<div class="projects__col-inner">
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
-										@@include('chunk/blocks/cards/p-card.html', {
-										"type": "",
-										"mod": "",
-										"attr": " data-modal-trigger='p-modal-1'",
-										"img_prefix": "p-card",
-										"img_width": "768",
-										"img_height": "768",
-										"img_loading": "",
-										"queue": "10"
-										})
+									<div class="projects__col">
+										<div class="projects__col-inner">
+											@@include('chunk/blocks/cards/p-card.html', {
+											"type": "",
+											"mod": "",
+											"attr": " data-modal-trigger='p-modal-1'",
+											"img_prefix": "p-card",
+											"img_width": "768",
+											"img_height": "768",
+											"img_loading": "",
+											"queue": "10"
+											})
+										</div>
 									</div>
-								</div>
-								<div class="projects__col">
-									<div class="projects__col-inner">
+									<div class="projects__col">
+										<div class="projects__col-inner">
+										</div>
 									</div>
 								</div>
 							</div>
@@ -349,18 +261,135 @@
 					</div>
 				</div>
 			</section>
-			<section class="section section--5a section--spacer section--window"></section>
-			<section class="section section--6 section-content section--window section--window_center" id="contacts">
+			<div class="section-spacer section-spacer--projects" data-fade="in" data-camera-from="-1.8" data-camera-to="1" data-camera-distance="100"></div>
+			<section class="section section--window section--slider section--team" id="team">
+				<div class="section__inner js-reveal-team">
+					<div class="slider slider--team">
+						<div class="slider__instance swiper js-slider" data-slider-params="team">
+							<div class="slider__wrapper swiper-wrapper">
+								<div class="slider__item swiper-slide">
+									<div class="slider__t-card a-fade js-reveal-team">
+										<div class="slider__t-card-img-wrap">
+											<div class="slider__t-card-img-ratio">
+												<picture>
+													<img class="slider__t-card-img" src="img/t-card-img-02--xs.png" srcset="img/t-card-img-02--xs@2x.png 2x" width="600" height="900" alt="">
+												</picture>
+											</div>
+										</div>
+										<div class="slider__t-card-desc">
+											<h3 class="slider__t-card-name">Виктор Лёвин</h3>
+											<div class="slider__t-card-position">IT специалист</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider__item swiper-slide">
+									<div class="slider__t-card a-fade js-reveal-team">
+										<div class="slider__t-card-img-wrap">
+											<div class="slider__t-card-img-ratio">
+												<picture>
+													<img class="slider__t-card-img" src="img/t-card-img-03--xs.png" srcset="img/t-card-img-03--xs@2x.png 2x" width="600" height="900" alt="">
+												</picture>
+											</div>
+										</div>
+										<div class="slider__t-card-desc">
+											<h3 class="slider__t-card-name">Дмитрий Поляков</h3>
+											<div class="slider__t-card-position">Техношаман</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider__item swiper-slide">
+									<div class="slider__t-card a-fade js-reveal-team">
+										<div class="slider__t-card-img-wrap">
+											<div class="slider__t-card-img-ratio">
+												<picture>
+													<img class="slider__t-card-img" src="img/t-card-img-01--xs.png" srcset="img/t-card-img-01--xs@2x.png 2x" width="600" height="900" alt="">
+												</picture>
+											</div>
+										</div>
+										<div class="slider__t-card-desc">
+											<h3 class="slider__t-card-name">Айна Гудратова</h3>
+											<div class="slider__t-card-position">саппорт Техношамана</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider__item swiper-slide">
+									<div class="slider__t-card a-fade js-reveal-team">
+										<div class="slider__t-card-img-wrap">
+											<div class="slider__t-card-img-ratio">
+												<picture>
+													<img class="slider__t-card-img" src="img/t-card-img-07--xs.png" srcset="img/t-card-img-07--xs@2x.png 2x" width="600" height="900" alt="">
+												</picture>
+											</div>
+										</div>
+										<div class="slider__t-card-desc">
+											<h3 class="slider__t-card-name">Юлия Федякина</h3>
+											<div class="slider__t-card-position">диджитал арт-директор</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider__item swiper-slide">
+									<div class="slider__t-card a-fade js-reveal-team">
+										<div class="slider__t-card-img-wrap">
+											<div class="slider__t-card-img-ratio">
+												<picture>
+													<img class="slider__t-card-img" src="img/t-card-img-04--xs.png" srcset="img/t-card-img-04--xs@2x.png 2x" width="600" height="900" alt="">
+												</picture>
+											</div>
+										</div>
+										<div class="slider__t-card-desc">
+											<h3 class="slider__t-card-name">Марина Ожигова</h3>
+											<div class="slider__t-card-position">АРТефактор</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider__item swiper-slide">
+									<div class="slider__t-card a-fade js-reveal-team">
+										<div class="slider__t-card-img-wrap">
+											<div class="slider__t-card-img-ratio">
+												<picture>
+													<img class="slider__t-card-img" src="img/t-card-img-05--xs.png" srcset="img/t-card-img-05--xs@2x.png 2x" width="600" height="900" alt="">
+												</picture>
+											</div>
+										</div>
+										<div class="slider__t-card-desc">
+											<h3 class="slider__t-card-name">Ольга Фролягина</h3>
+											<div class="slider__t-card-position">юрист</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider__item swiper-slide">
+									<div class="slider__t-card a-fade js-reveal-team">
+										<div class="slider__t-card-img-wrap">
+											<div class="slider__t-card-img-ratio">
+												<picture>
+													<img class="slider__t-card-img" src="img/t-card-img-06--xs.png" srcset="img/t-card-img-06--xs@2x.png 2x" width="600" height="900" alt="">
+												</picture>
+											</div>
+										</div>
+										<div class="slider__t-card-desc">
+											<h3 class="slider__t-card-name">Роман Угольников</h3>
+											<div class="slider__t-card-position">инженер</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="slider__pagination swiper-pagination swiper-pagination--alternate js-slider-pagination a-fade js-reveal-team"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="section-spacer section-spacer--team" data-fade="out" data-rotation="out" data-camera-from="1" data-camera-to="9" data-camera-distance="100"></div>
+			<section class="section section--window section--align_center section--contacts" id="contacts">
 				<div class="section__inner">
 					<div class="section__container">
 						<div class="section__row">
 							<div class="section__col section__col--contacts">
 								<div class="contacts">
-									<div class="contacts__header js-reveal-contacts-1">
+									<div class="contacts__header a-fade js-reveal-contacts">
 										<h2 class="section-title section-title--size_small">Хотите обсудить ваш проект?</h2>
 										<h3 class="section-title section-title--size_small">Cвяжитесь с нами!</h3>
 									</div>
-									<div class="contacts__body js-reveal-contacts-2">
+									<div class="contacts__body a-fade js-reveal-contacts">
 										<div class="contacts-list">
 											<div class="contacts-list__item">
 												<a class="contacts-list__link" href="tel:88008887766">8 800 888 77 66</a>
@@ -398,18 +427,17 @@
 										</div>
 									</div>
 								</div>
-
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="section section--7 section--window section--window_center">
+			<section class="section section--window section--align_center section--outro" id="outro">
 				<div class="section__inner">
 					<div class="section__container">
 						<div class="section__row">
 							<div class="section__col section__col--8 section__col--center">
-								<h2 class="section-title section-title--size_small section-title--align_center js-reveal-outro">Любая достаточно развитая технология неотличима от магии</h2>
+								<h2 class="section-title section-title--size_small section-title--align_center a-fade js-reveal-outro">Любая достаточно развитая технология неотличима от магии</h2>
 							</div>
 						</div>
 					</div>
@@ -418,15 +446,14 @@
 		</main>
 	</div>
 </div>
+@@include('chunk/base/page-loader.html')
 @@include('chunk/blocks/modal/p-modal.html', {
 "id":			"p-modal-1",
 "mod":		" modal--project",
 "attr": 	"",
 "title": 	"Play DigitalArt"
 })
-<!-- only in development -->
-@@include('chunk/helpers/helper-grid.html', {"isVisible": "false"})
-<!-- only in development ! -->
-<script src="js/main.min.js"></script>
+<!--@@include('chunk/helpers/helper-grid.html', {"isVisible": "true"})-->
+<script src="js/main.min.js?=v6"></script>
 </body>
 </html>

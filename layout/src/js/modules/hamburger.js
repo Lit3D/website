@@ -1,13 +1,10 @@
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock-upgrade';
-
-import {lenis} from "./lenis";
-import {widthMD} from "./page-config";
-import {gsap} from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {blobRevealConfig} from "./scroll/scrollConfig";
+import { getIndexOfElement } from "./helpers";
+import { lenis } from "./lenis";
+import { widthMD } from "./page-config";
+import { scrollToSection } from "./scroll/scrollHelpers";
 const pageHeaderNav = document.querySelector('.page-header__nav');
+const pageHeaderNavList = document.querySelector('.page-header__nav-list');
 const pageHeaderNavToggle = document.querySelector('.js-header-nav-toggle');
-const pageHeaderNavBlockTarget = document.querySelector('.page-header__nav-inner');
 
 // toggle mobile nav clicking hamburger
 const headerNavTrigger = (event) => {
@@ -29,63 +26,30 @@ const headerNavTrigger = (event) => {
 
 // go to section by clicking nav link
 const headerNavTo = (event) => {
-	event.preventDefault();
 	const target = event.target.closest('.js-page-link');
 
 	if (target) {
+		event.preventDefault();
 		const href = target.getAttribute('href');
 		const section = document.getElementById(href.slice(1));
+		const targetIndex = getIndexOfElement('.section', section);
+		const currentIndex = window.indexOfCurrentSection;
+		let calculatedIndex = currentIndex - targetIndex;
+		let duration = 1.5;
+		let multiplier = 0.75;
+		history.replaceState(undefined, undefined, href)
+
+		if (calculatedIndex !== 0) {
+			duration = Math.abs(currentIndex - targetIndex) * multiplier;
+		}
 
 		closeHeaderNav(() => {
-			gsap.to(window, {
-				scrollTo: {
-					y: section,
-					offsetY: -1,
-				},
-				duration: 2,
-				onComplete: function () {
-					if (href === '#team' && section.classList.contains('is-leaved')) {
-						gsap.to(window, {
-							scrollTo: {
-								y: section,
-								offsetY: 1,
-							},
-							duration: 0,
-						});
-					}
-				}
+			pageHeaderNavList.classList.add('is-disabled');
+			scrollToSection(section, duration, () => {
+				pageHeaderNavList.classList.remove('is-disabled');
 			});
 		});
 	}
-}
-
-function getScrollLookup(
-	targets,
-	{ start, pinnedContainer, containerAnimation }
-) {
-	let triggers = gsap.utils.toArray(targets).map((el) =>
-			ScrollTrigger.create({
-				trigger: el,
-				start: start || "top top",
-				pinnedContainer: pinnedContainer,
-				refreshPriority: -10,
-				containerAnimation: containerAnimation,
-			})
-		),
-		st = containerAnimation && containerAnimation.scrollTrigger;
-	return (target) => {
-		let t = gsap.utils.toArray(target)[0],
-			i = triggers.length;
-		while (i-- && triggers[i].trigger !== t) {}
-		if (i < 0) {
-			return console.warn("target not found", target);
-		}
-		return containerAnimation
-			? st.start +
-			(triggers[i].start / containerAnimation.duration()) *
-			(st.end - st.start)
-			: triggers[i].start;
-	};
 }
 
 // open mobile nav

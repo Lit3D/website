@@ -1,5 +1,4 @@
 import {gsap} from "gsap";
-import {globalRevealConfig} from "./scrollConfig";
 
 const initCommonScrollEffects = () => {
 
@@ -39,6 +38,9 @@ const initCommonScrollEffects = () => {
 			},
 			ease: 'power2.inOut'
 		});
+
+
+
 	});
 }
 

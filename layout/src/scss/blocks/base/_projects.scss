@@ -1,8 +1,14 @@
 .projects {
 	$self: &;
-
 	padding-top: 32px;
 	padding-bottom: 32px;
+
+	&__container {
+
+		@media (max-width: $screen-lg - 1) {
+			@include container();
+		}
+	}
 
 	&__inner {
 		display: flex;
@@ -19,16 +25,27 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: flex-start;
+		row-gap: 96px;
 		width: 100%;
-		//row-gap: 56px;
-		//@include row();
 
-		@media (max-width: $screen-lg - 1) {
-			row-gap: 64px;
+		@media (min-width: $screen-sm) {
+			row-gap: 172px;
+		}
+
+		@media (min-width: $screen-md) {
+			row-gap: 128px;
 		}
 
 		@media (min-width: $screen-lg) {
 			row-gap: 128px;
+		}
+
+		@media (min-width: $screen-xl) {
+			row-gap: 164px;
+		}
+
+		@media (min-width: $screen-xxl) {
+			row-gap: 200px;
 		}
 
 
@@ -40,7 +57,7 @@
 	&__col {
 		width: 33.3333%;
 
-		@media (min-width: $screen-lg) {
+		@media (min-width: $screen-sm) {
 			width: 20%;
 		}
 	}
@@ -49,8 +66,5 @@
 		position: relative;
 		width: 100%;
 		aspect-ratio: 4 / 3;
-	//	background-color: rgba(yellow, 0.5);
-		//background-color: rgba(yellow, 0.5);
-	//outline: 2px dashed white;
 	}
 }

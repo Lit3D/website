@@ -18,9 +18,14 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		row-gap: 12px;
+		will-change: opacity, transform;
 
 		@media (min-width: $screen-xl) {
 			row-gap: 16px;
 		}
+	}
+
+	&__body {
+		will-change: opacity, transform;
 	}
 }

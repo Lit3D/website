@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import Experience from "../Experience";
 import Environment from "./Environment";
 import Blob from "./Blob";
+import Overlay from "./Overlay";
 
 export default class World {
 	constructor() {
@@ -19,11 +20,12 @@ export default class World {
 		});
 
 		this.blob = new Blob();
+		this.overlay = new Overlay();
 	}
 
 	update() {
-		if (this.fox) {
-			this.fox.update();
+		if (this.overlay) {
+			this.overlay.update();
 		}
 
 		if (this.blob) {
