@@ -57,12 +57,12 @@
     "body-scroll-lock-upgrade": "^1.0.4",
     "glslify-hex": "^2.1.1",
     "glslify-loader": "^2.0.0",
-    "gsap": "^3.12.2",
+    "gsap": "^3.12.5",
     "imask": "^6.6.3",
     "lil-gui": "^0.18.2",
     "raw-loader": "^4.0.2",
     "split-type": "^0.3.3",
-    "swiper": "^9.3.2",
+    "swiper": "^11.1.4",
     "three": "^0.157.0"
   }
 }

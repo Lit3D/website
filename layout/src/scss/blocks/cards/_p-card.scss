@@ -4,6 +4,7 @@
 	z-index: 1;
 	width: 100%;
 	cursor: pointer;
+	perspective: 700px;
 
 	@media (min-width: $screen-md) {
 		width: 75%;
@@ -12,6 +13,7 @@
 	&__img-wrap {
 		width: 100%;
 		aspect-ratio: 1 / 1;
+		background-color: #c60c36;
 		border-radius: 50%;
 		overflow: hidden;
 	}
@@ -21,6 +23,7 @@
 		height: 100%;
 		object-fit: cover;
 		object-position: center center;
+		opacity: 0;
 	}
 
 	&__title {

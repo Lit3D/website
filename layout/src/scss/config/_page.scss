@@ -35,6 +35,7 @@
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
+		overflow: hidden;
 	}
 
 	&__content {
@@ -71,7 +72,8 @@ body {
 	text-align: left;
 	color: $text-color;
 	background-color: $body-bg;
-
+	//scroll-behavior: smooth;
+	//-webkit-overflow-scrolling: auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale
 }

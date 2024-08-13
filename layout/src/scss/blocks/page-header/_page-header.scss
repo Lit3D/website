@@ -133,6 +133,10 @@
 			flex-direction: row;
 			align-items: center;
 		}
+
+		&.is-disabled {
+			pointer-events: none;
+		}
 	}
 
 	&__nav-item {}

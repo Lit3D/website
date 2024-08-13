@@ -1,6 +1,7 @@
 .section-title {
 	$self: &;
 	@include section-title(500);
+	will-change: opacity, transform;
 
 	// Mixes
 

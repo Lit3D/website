@@ -106,6 +106,8 @@
 // Alternate
 
 .swiper-pagination--alternate .swiper-pagination-bullet {
+	width: 8px;
+	height: 8px;
 	background-color: transparent;
 	border: 1px solid $color-white;
 }

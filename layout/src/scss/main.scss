@@ -7,7 +7,6 @@
 @import 'config/mixins/_typography-mixins.scss';
 @import 'config/_variables.scss';
 @import 'config/_page.scss';
-@import 'config/_helper-grid.scss';
 
 // LIBS
 @import 'blocks/libs/_lenis.scss';
@@ -48,8 +47,10 @@
 
 @import 'blocks/page-header/_page-header.scss';
 @import 'blocks/section/_section.scss';
+@import 'blocks/section/_section-spacer.scss';
 @import 'blocks/modal/_m-img.scss';
 @import 'blocks/modal/_modal.scss';
+@import 'blocks/base/_page-loader.scss';
 @import 'blocks/base/_about.scss';
 @import 'blocks/base/_projects.scss';
 @import 'blocks/base/_social-list.scss';

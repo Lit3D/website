@@ -21,4 +21,4 @@ const pageHeaderScrolling = (element) => {
 	}
 }
 
-export {pageHeaderScrolling};
+export { pageHeaderScrolling };

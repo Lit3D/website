@@ -1,4 +1,3 @@
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock-upgrade';
 import { getDocumentScrollBarWidth } from './base.js';
 import { fadeIn, fadeOut } from './animations.js';
 import { lenis } from "./lenis";

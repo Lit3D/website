@@ -1,7 +1,6 @@
-import Swiper, { Navigation, Pagination, Scrollbar, EffectCoverflow, Keyboard, Mousewheel } from 'swiper';
-import {lenis} from "./lenis";
+import Swiper from 'swiper';
+import { Navigation, Pagination, Scrollbar, EffectCoverflow, Keyboard, Mousewheel } from 'swiper/modules'
 import {isLandscape, isPortrait, widthMD} from "./page-config";
-import {gsap} from "gsap";
 const sliderInstances = [];
 
 const sliderInit = () => {
@@ -17,11 +16,10 @@ const sliderInit = () => {
 
 		let sliderParams = {};
 
-		if (sliderSlidesQuantity > 12) {
+		if (sliderSlidesQuantity > 20) {
 			isPaginationDynamic = true;
 		}
 
-		/* todo: add check, if pagination element exist in DOM */
 		if (sliderSlidesQuantity > 1) {
 			sliderWrapper.classList.add('slider--pagination');
 		}
@@ -34,6 +32,7 @@ const sliderInit = () => {
 					slidesPerView: 1,
 					spaceBetween: 0,
 					speed: 600,
+					loop: true,
 					effect: "coverflow",
 					centeredSlides: true,
 					coverflowEffect: {
@@ -46,10 +45,6 @@ const sliderInit = () => {
 					keyboard: {
 						enabled: true
 					},
-					mousewheel: {
-						sensitivity: 1,
-						releaseOnEdges: true,
-					},
 					observer: true,
 					watchOverflow: true,
 					watchSlidesProgress: true,
@@ -60,6 +55,7 @@ const sliderInit = () => {
 						1024: {
 							slidesPerView: 3,
 							spaceBetween: 128,
+							centeredSlides: false,
 							coverflowEffect: {
 								modifier: 1,
 							}
@@ -67,6 +63,7 @@ const sliderInit = () => {
 						1440: {
 							slidesPerView: 3,
 							spaceBetween: 192,
+							centeredSlides: false,
 							coverflowEffect: {
 								modifier: 1,
 							}
@@ -74,6 +71,7 @@ const sliderInit = () => {
 						1700: {
 							slidesPerView: 3,
 							spaceBetween: 260,
+							centeredSlides: false,
 							coverflowEffect: {
 								modifier: 1,
 							}
@@ -87,52 +85,36 @@ const sliderInit = () => {
 						hideOnClick: false,
 					},
 					on: {
+						click() {
+							const swiper = this;
+
+							if (widthMD.matches) {
+								if (this.activeIndex === this.clickedIndex) {
+									swiper.slidePrev(600);
+								} else {
+									swiper.slideNext(600);
+								}
+							} else {
+								swiper.slideNext(600);
+							}
+						},
 						resize: function () {
 							const swiper = this;
 
 							if (isLandscape.matches && !widthMD.matches) {
 								swiper.params.slidesPerView = 3;
 								swiper.params.spaceBetween = 128;
+								swiper.params.centeredSlides = false;
 								swiper.update();
 							}
 
 							if (isPortrait.matches && !widthMD.matches) {
 								swiper.params.slidesPerView = 1;
 								swiper.params.spaceBetween = 0;
+								swiper.params.centeredSlides = false;
 								swiper.update();
 							}
-
-							lenis.start();
 						},
-						slideChange: function() {
-							const swiper = this;
-							lenis.stop();
-						},
-						reachEnd: function() {
-							const swiper = this;
-							setTimeout(function () {
-								lenis.start();
-							}, 500);
-						},
-						reachBeginning: function () {
-							setTimeout(function () {
-								lenis.start();
-							}, 500);
-						},
-						slideNextTransitionStart: function () {
-							gsap.to(experience.world.blob.particles.rotation, {
-								z: experience.world.blob.particles.rotation.z + Math.PI / 16,
-								duration: 0.6,
-								ease: 'power1.inOut',
-							});
-						},
-						slidePrevTransitionStart: function () {
-							gsap.to(experience.world.blob.particles.rotation, {
-								z: experience.world.blob.particles.rotation.z - Math.PI / 16,
-								duration: 0.6,
-								ease: 'power1.inOut',
-							});
-						}
 					},
 				};
 				break;
